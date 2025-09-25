@@ -1,0 +1,144 @@
+/* 基础重置与字体 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+}
+
+/* 容器样式 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+/* 标题样式 */
+header { text-align: center; margin-bottom: 25px; }
+h1 { color: #2c3e50; margin-bottom: 10px; }
+.description { color: #7f8c8d; margin-bottom: 20px; }
+
+/* 上传区域 */
+.upload-section { 
+    background: #f8f9fa; 
+    border: 2px dashed #ccc; 
+    border-radius: 8px; 
+    padding: 20px; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    transition: border-color 0.3s; 
+}
+.upload-section:hover { border-color: #3498db; }
+.file-input { 
+    display: block; 
+    margin-top: 10px; 
+    padding: 10px 15px; 
+    background: #e9ecef; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+.file-name { 
+    display: block; 
+    margin-top: 10px; 
+    font-weight: 500; 
+    color: #495057; 
+}
+
+/* 按钮样式 */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+button:hover { background-color: #0069d9; }
+button:disabled { 
+    background-color: #6c757d; 
+    cursor: not-allowed; 
+}
+
+/* 进度和状态提示 */
+.progress { 
+    text-align: center; 
+    padding: 10px; 
+    margin: 15px 0; 
+    color: #6c757d; 
+    background-color: #e9ecef; 
+    border-radius: 4px; 
+}
+.loading-bar { 
+    height: 6px; 
+    background: #e9ecef; 
+    border-radius: 3px; 
+    margin: 10px 0; 
+    overflow: hidden; 
+}
+.loading-progress { 
+    height: 100%; 
+    background: #28a745; 
+    width: 0%; 
+    transition: width 0.4s; 
+}
+
+/* 结果区域 */
+.result-section { 
+    margin-top: 25px; 
+    padding: 20px; 
+    background-color: #d4edda; 
+    border: 1px solid #c3e6cb; 
+    border-radius: 4px; 
+    color: #155724; 
+}
+.data-preview {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* 统计卡片 */
+.stat-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 15px;
+}
+.stat-card {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.stat-value { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #007bff; 
+    margin: 10px 0; 
+}
+.stat-label { 
+    font-size: 14px; 
+    color: #6c757d; 
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .stat-cards { flex-direction: column; }
+    .container { padding: 15px; }
+}
